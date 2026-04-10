@@ -55,7 +55,7 @@ Sandbox Profile Language syntax for macOS Seatbelt.
 ### Allow File Access
 
 ```sbpl
-(allow file-read-data file-write-data (subpath "/Users/guangtao/projects"))
+(allow file-read-data file-write-data (subpath "/path/to/projects"))
 ```
 
 ### Allow Python Runtime
@@ -74,7 +74,7 @@ Sandbox Profile Language syntax for macOS Seatbelt.
 (allow default)
 (allow network-outbound)
 (allow network-inbound)
-(allow file-read-data file-write-data (subpath "/Users/guangtao/projects"))
+(allow file-read-data file-write-data (subpath "/path/to/projects"))
 (allow file-read-data file-write-data (subpath "/usr/local"))
 (allow file-read-data file-write-data (subpath "/usr/lib"))
 (allow file-read-data file-write-data (subpath "/System/Library"))

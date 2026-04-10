@@ -33,12 +33,12 @@ macOS sandbox configuration using Seatbelt (sandbox-exec).
 ```bash
 # Generate profile with override
 nickel export examples/python-script-runner.ncl --field _profile -f text -- \
-  --override 'home_dir="/Users/guangtao"' \
-  --override 'script_path="/path/to/script.py"' \
+  --override "home_dir=\"$HOME\"" \
+  --override "script_path=\"$HOME/projects/my_script.py\"" \
   > /tmp/profile.sb
 
 # Run in sandbox
-sandbox-exec -f /tmp/profile.sb /usr/bin/python3 /path/to/script.py
+sandbox-exec -f /tmp/profile.sb /usr/bin/python3 "$HOME/projects/my_script.py"
 ```
 
 ## Nickel CLI
@@ -61,8 +61,8 @@ nickel export config.ncl -- list
 
 # Override values
 nickel export config.ncl -f text -- \
-  --override 'home_dir="/Users/guangtao"' \
-  --override 'script_path="/path/to/script.py"'
+  --override "home_dir=\"$HOME\"" \
+  --override "script_path=\"$HOME/projects/my_script.py\""
 ```
 
 ## Concepts
@@ -78,13 +78,13 @@ nickel export config.ncl -f text -- \
 ```bash
 # Generate profile
 nickel export examples/python-script-runner.ncl --field _profile -f text -- \
-  --override 'home_dir="/Users/guangtao"' \
-  --override 'script_path="/Users/guangtao/projects/my_script.py"' \
+  --override "home_dir=\"$HOME\"" \
+  --override "script_path=\"$HOME/projects/my_script.py\"" \
   --override 'python_path="/usr/bin/python3"' \
   > /tmp/profile.sb
 
 # Run
-sandbox-exec -f /tmp/profile.sb /usr/bin/python3 /Users/guangtao/projects/my_script.py
+sandbox-exec -f /tmp/profile.sb /usr/bin/python3 "$HOME/projects/my_script.py"
 ```
 
 ## Best Practices

@@ -28,12 +28,12 @@ Example: `examples/python-script-runner.ncl`
 ```bash
 # Generate with override
 nickel export examples/python-script-runner.ncl --field _profile -f text -- \
-  --override 'home_dir="/Users/guangtao"' \
-  --override 'script_path="/Users/guangtao/projects/script.py"' \
+  --override "home_dir=\"$HOME\"" \
+  --override "script_path=\"$HOME/projects/script.py\"" \
   > profile.sb
 
 # Run
-sandbox-exec -f profile.sb /usr/bin/python3 /Users/guangtao/projects/script.py
+sandbox-exec -f profile.sb /usr/bin/python3 "$HOME/projects/script.py"
 ```
 
 ## Minimal Profile

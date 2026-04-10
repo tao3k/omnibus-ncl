@@ -38,7 +38,7 @@ Matches: `/tmp/myfile` only
 ### User Directory
 
 ```sbpl
-(allow file-read-data file-write-data (subpath "/Users/guangtao/projects"))
+(allow file-read-data file-write-data (subpath "/path/to/projects"))
 ```
 
 ### Temp Directories

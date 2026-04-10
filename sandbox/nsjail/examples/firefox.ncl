@@ -16,6 +16,7 @@ let rlimitMod = import "../lib/rlimit.ncl" in
 let network = import "../lib/network.ncl" in
 let uidmapMod = import "../lib/uidmap.ncl" in
 let seccomp = import "../lib/seccomp.ncl" in
+let User = import "../../examples/user-config.ncl" in
 
 {
   name = "firefox-sandbox",
@@ -69,7 +70,7 @@ let seccomp = import "../lib/seccomp.ncl" in
     mounts.bind_rw "/run/user/1000/pulse" "/run/user/1000/pulse",
 
     # Home directory (browse and download)
-    mounts.bind_rw "/Users/guangtao" "/user/home",
+    mounts.bind_rw User.home "/user/home",
     mounts.tmpfs "/user/.cache" "500M",
     mounts.tmpfs "/user/.config" "100M",
 

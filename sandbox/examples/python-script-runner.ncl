@@ -3,9 +3,9 @@
 # Usage:
 #   1. Generate profile:
 #      nickel export python-script-runner.ncl --field _profile -f text -- \
-#        --override 'home_dir="/Users/guangtao"' \
-#        --override 'script_path="/Users/guangtao/projects/test_sandbox/hello.py"' \
-#        --override 'python_path="/Users/guangtao/.devenv/state/venv/bin/python3"' \
+#        --override "home_dir=\"$HOME\"" \
+#        --override "script_path=\"$HOME/projects/test_sandbox/hello.py\"" \
+#        --override "python_path=\"$(command -v python3)\"" \
 #        > profile.txt
 #
 #   2. Run in sandbox:
