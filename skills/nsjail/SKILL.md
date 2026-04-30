@@ -1,8 +1,20 @@
 ---
+kind: SKILL.md
+type: skill
+title: "Nsjail Sandbox"
+category: "security"
+tags:
+  - nsjail
+  - sandbox
+  - linux
 name: nsjail
 description: Use when configuring Linux sandboxing with nsjail, generating security profiles, or configuring process isolation for skills.
+author: xiuxian-artisan-workshop
+date: 2026-04-26T09:30-07:00
 metadata:
-  author: xiuxian-artisan-workshop
+  retrieval:
+    saliency_base: 5.5
+    decay_rate: 0.05
   version: "1.0.0"
   source: "https://github.com/tao3k/xiuxian-artisan-workshop/tree/main/packages/ncl/sandbox/nsjail"
   routing_keywords:
@@ -29,6 +41,18 @@ Linux sandboxing and process isolation using nsjail.
 | [`nsjail_config`](#nsjail_config) | Generate nsjail configuration |
 | [`nsjail_profile`](#nsjail_profile) | Generate nsjail profile |
 | [`nsjail_run`](#nsjail_run) | Run command in nsjail |
+
+### nsjail_config
+
+Generate an nsjail configuration.
+
+### nsjail_profile
+
+Generate an nsjail profile.
+
+### nsjail_run
+
+Run a command in nsjail.
 
 ## Usage Examples
 

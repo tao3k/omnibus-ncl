@@ -1,8 +1,20 @@
 ---
+kind: SKILL.md
+type: skill
+title: "Seatbelt Sandbox"
+category: "security"
+tags:
+  - seatbelt
+  - sandbox
+  - macos
 name: seatbelt
 description: Use when configuring macOS sandbox execution with Seatbelt profiles, generating sandbox-exec profiles, or testing macOS sandbox restrictions.
+author: xiuxian-artisan-workshop
+date: 2026-04-26T09:30-07:00
 metadata:
-  author: xiuxian-artisan-workshop
+  retrieval:
+    saliency_base: 5.5
+    decay_rate: 0.05
   version: "1.1.0"
   source: "https://github.com/tao3k/xiuxian-artisan-workshop/tree/main/packages/ncl/sandbox/seatbelt"
   routing_keywords:
@@ -27,6 +39,14 @@ macOS sandbox configuration using Seatbelt (sandbox-exec).
 |---------|-------------|
 | [`seatbelt_profile`](#seatbelt_profile) | Generate Seatbelt profile |
 | [`seatbelt_export`](#seatbelt_export) | Export SBPL profile to file |
+
+### seatbelt_profile
+
+Generate a Seatbelt profile.
+
+### seatbelt_export
+
+Export an SBPL profile to a file.
 
 ## Quick Usage
 
